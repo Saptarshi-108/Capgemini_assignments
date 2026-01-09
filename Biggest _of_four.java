@@ -11,6 +11,11 @@ public class Biggest_of_four {
 		int d = sc.nextInt();
 		int great = (a>b && a>c && a>d)?a:((b>c && b>d && b>a)?b:(c>a && c>b && c>d)?c:d);
 		System.out.println(great);
+
+		int big = (a>b)?a:b;
+		big = (big>c)?big:c;
+		big = (big>d)?big:d;
+		System.out.println(big);
 		sc.close();
 	}
 }
