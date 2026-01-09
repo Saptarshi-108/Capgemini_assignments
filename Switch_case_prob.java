@@ -3,7 +3,7 @@ package Java_training;
 import java.util.Scanner;
 
 // Write a program to create a calculator by using switch case.
-public class Switch_case {
+public class Switch_case_prob {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String day = sc.next();
