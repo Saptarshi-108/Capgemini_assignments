@@ -1,20 +1,25 @@
 package Java_training;
 
+import java.util.Scanner;
+
 public class Details {
-	 public static void main(String[] args) {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
 
-	   String name = "Saptarshi Mandal";
-       long phoneNumber = 9876543210L;
-       char gender = 'M';
-       boolean married = false;
-       int age = 22;
-       float weight = 65.5f;
+        String name = sc.nextLine();
+        int age = sc.nextInt();
+        long phone = sc.nextLong();
+        String email = sc.nextLine();
+        String gender = sc.nextLine();
+        boolean married = sc.nextBoolean();
 
-       System.out.println("Name: " + name);
-       System.out.println("Phone Number: " + phoneNumber);
-       System.out.println("Gender: " + gender);
-       System.out.println("Married: " + married);
-       System.out.println("Age: " + age);
-       System.out.println("Weight: " + weight);
-	 }
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(phone);
+        System.out.println(email);
+        System.out.println(gender);
+        System.out.println(married);
+
+        sc.close();
+    }
 }
