@@ -1,12 +1,32 @@
 import java.util.Scanner;
 
 class DisariumNumber {
+    static int power(int b, int e) {
+        int r = 1;
+        for (int i = 1; i <= e; i++) {
+            r = r * b;
+        }
+        return r;
+    }
+
+    static int count(int n) {
+        int c = 0;
+        while (n > 0) {
+            c++;
+            n = n / 10;
+        }
+        return c;
+    }
+
     static boolean isDisarium(int n) {
-        String s = String.valueOf(n);
+        int temp = n;
+        int pos = count(n);
         int sum = 0;
-        for (int i = 0; i < s.length(); i++) {
-            int d = s.charAt(i) - '0';
-            sum += Math.pow(d, i + 1);
+        while (temp > 0) {
+            int d = temp % 10;
+            sum = sum + power(d, pos);
+            pos--;
+            temp = temp / 10;
         }
         return sum == n;
     }
