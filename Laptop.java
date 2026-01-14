@@ -1,38 +1,46 @@
-package Java_training;
+
+
+package Java_Core;
 
 import java.util.Scanner;
 
 public class Laptop {
-    int brand;
-    double price;
+	String brand;
+	double price;
 
-    public static void comparePrice(Laptop l1, Laptop l2) {
-        if (l1.price > l2.price) {
-            System.out.println("Laptop 1 is more expensive");
-        } else if (l1.price < l2.price) {
-            System.out.println("Laptop 2 is more expensive");
-        } else {
-            System.out.println("Both laptops have the same price");
-        }
-    }
+	public Laptop(String brand, double price) {
+		this.brand = brand;
+		this.price = price;
+	}
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+	public void comparePrice(Laptop laptop) {
+		if (this.price > laptop.price) {
+			System.out.println(this.brand + " is costly");
+		} else if (this.price < laptop.price) {
+			System.out.println(laptop.brand + " is costly.");
+		} else {
+			System.out.println("Both laptops have sam cost");
+		}
+	}
 
-        Laptop[] laptops = new Laptop[2];
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 
-        for (int i = 0; i < laptops.length; i++) {
-            laptops[i] = new Laptop();
+		System.out.print("Enter first laptop brand: ");
+		String brand1 = sc.nextLine();
+		System.out.print("Enter first laptop price: ");
+		double price1 = sc.nextDouble();
+		sc.nextLine();
 
-            System.out.println("Enter brand (as number) for laptop " + (i + 1) + ":");
-            laptops[i].brand = sc.nextInt();
+		System.out.print("Enter second laptop brand: ");
+		String brand2 = sc.nextLine();
+		System.out.print("Enter second laptop price: ");
+		double price2 = sc.nextDouble();
 
-            System.out.println("Enter price for laptop " + (i + 1) + ":");
-            laptops[i].price = sc.nextDouble();
-        }
+		Laptop l1 = new Laptop(brand1, price1);
+		Laptop l2 = new Laptop(brand2, price2);
 
-        comparePrice(laptops[0], laptops[1]);
-
-        sc.close();
-    }
+		l1.comparePrice(l2);
+	}
 }
+
