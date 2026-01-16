@@ -4,7 +4,7 @@ class Parent{
 	public void home() {
 		System.out.println("blue");
 	}
-	public void home2() {
+	public static void home2() {
 		System.out.println("Parent static method");
 	}
 }
@@ -13,7 +13,7 @@ public class Child extends Parent{
 	public void home() {
 		System.out.println("red");
 	}
-	public void home2() {
+	public static void home2() {
 		System.out.println("Child static method");
 	}
 	public void bike() {
