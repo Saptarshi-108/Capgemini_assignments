@@ -15,6 +15,7 @@ public class StackSample {
 		System.out.println();
 		
 		while (!stack.empty()) {
+			System.out.println("Peek a boo on "+stack.peek());
 			System.out.println(stack.pop()+" got popped from stack.");
 		}
 		System.out.println("The size of the stack is = "+stack.size());
