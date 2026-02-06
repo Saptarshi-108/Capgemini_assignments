@@ -98,11 +98,13 @@ Tasks
 Solve using PriorityQueue
  
 Explain why heap solution is O(n log k)
- 
-Java Code (PriorityQueue)
-import java.util.*;
 
+
+Java Code (PriorityQueue)
+
+import java.util.*;
 public class SlidingWindowMaximum {
+
     public static void main(String[] args) {
         int[] nums = {1,3,-1,-3,5,3,6,7};
         int k = 3;
@@ -128,3 +130,5 @@ public class SlidingWindowMaximum {
         System.out.println(result);
     }
 }
+
+
