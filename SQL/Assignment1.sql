@@ -1,6 +1,6 @@
 -- Projection 
   
-SQL> conn scott/tiger
+SQL> conn ****/****
 Connected.
 SQL> CREATE TABLE DEPT(
   2  DEPTNO NUMBER(2,0),
